@@ -969,6 +969,27 @@
   <h2>What You Should Do — Starting Monday</h2>
   <p class="section-intro">Knowing the data is not enough. The gap between understanding what's coming and actually preparing for it is where careers are made or broken. Here are concrete, prioritized recommendations for the three professional tracks in this room — based on where the technology is right now, not where it might be in five years.</p>
 
+  <!-- Data Privacy Warning -->
+  <div class="highlight-box" style="margin-bottom:2rem;border-color:rgba(255,180,0,0.4);background:rgba(255,180,0,0.05);">
+    <p style="font-size:1.1rem;font-weight:700;color:#FFB400;margin-bottom:0.75rem;">A Critical Note on Confidentiality & Data Privacy</p>
+    <p>You work in M&A. You handle non-public, price-sensitive, legally privileged information every day. <strong style="color:var(--white)">Do not blindly upload confidential client data to any public AI model.</strong></p>
+    <p style="margin-top:0.75rem;">When I recommend using frontier AI tools below, I mean it — but with professional judgment. Consider these layers:</p>
+    <ul style="margin:0.75rem 0 0.75rem 1.5rem;color:var(--light);">
+      <li><strong style="color:var(--white)">Public consumer tools</strong> (ChatGPT, Claude.ai, Gemini) — excellent for learning, non-sensitive research, and building AI fluency. Use anonymized or synthetic data when experimenting.</li>
+      <li><strong style="color:var(--white)">Enterprise/API deployments</strong> (Azure OpenAI, AWS Bedrock, Anthropic API) — data is not used for training and contractual protections apply. This is where firm-level adoption should happen.</li>
+      <li><strong style="color:var(--white)">On-premise / private cloud</strong> — for the most sensitive work, models can run entirely within your firm's infrastructure. This is where the industry is heading.</li>
+    </ul>
+    <p style="margin-top:0.75rem;">The recommendations below are a starting point. <strong style="color:var(--white)">You have a professional and ethical responsibility to exercise judgment</strong> about what data goes where. Consult your firm's information security policies. If your firm doesn't have an AI usage policy yet — that is itself a red flag.</p>
+  </div>
+
+  <!-- Frontier Model Context -->
+  <div class="card" style="border-left:3px solid #FFB400;margin-bottom:2rem;">
+    <h3 style="color:#FFB400;margin-bottom:0.75rem;">Why Frontier Models Matter — Even If Your Firm Has Its Own AI</h3>
+    <p>Many of you use internal tools like Hogan Lovells' <strong style="color:#0096D6">CRAIG</strong> or similar firm-specific AI platforms. These are valuable — but understand what you're working with. CRAIG launched in December 2023 and, like most enterprise legal AI tools, its underlying model likely lags <strong>12-18 months behind the frontier</strong>. Enterprise deployments require compliance review, security audits, and integration testing — all of which create delay.</p>
+    <p style="margin-top:0.75rem;">Meanwhile, frontier models like <strong style="color:var(--cyan)">Claude Opus 4.6</strong>, <strong style="color:var(--green)">GPT-4.5</strong>, and <strong style="color:var(--purple)">Gemini 3.1 Pro</strong> (March 2026) are operating at a level that would have been science fiction two years ago — complex legal reasoning, multi-step analysis, nuanced judgment calls across hundreds of pages. The gap between what your firm's tool can do and what the frontier can do is <em>enormous</em>, and it's growing.</p>
+    <p style="margin-top:0.75rem;">This doesn't mean your firm's tools are useless — they're tuned for your specific workflows and data. But if you only interact with enterprise AI, you have no idea what's actually possible. <strong style="color:var(--white)">You owe it to yourself — and your clients — to understand the frontier.</strong> Use consumer-tier frontier models (with non-sensitive data) to calibrate your understanding of where AI actually is. Then push your firm to close the gap.</p>
+  </div>
+
   <!-- M&A Lawyers -->
   <div class="card" style="border-left:3px solid var(--cyan);">
     <h3 style="color:var(--cyan);margin-bottom:1rem;">For M&A Lawyers & Legal Associates</h3>
@@ -976,8 +997,8 @@
 
     <p><strong style="color:var(--white);">This Week:</strong></p>
     <ul style="margin:0.5rem 0 1rem 1.5rem;color:var(--light);">
-      <li>Get a personal Claude Pro or ChatGPT Plus subscription. Start using AI for <em>every</em> draft, memo, and due diligence checklist — not as a toy, but as your default workflow.</li>
-      <li>Run one of your recent transaction documents through an AI tool. Compare its analysis to yours. Notice what it catches that you missed.</li>
+      <li>Get a personal Claude Pro or ChatGPT Plus subscription. Start using AI for non-confidential work — research memos, general legal analysis, learning new practice areas. Build the muscle memory. When your firm deploys enterprise AI, you'll be ready to run while others are still learning to walk.</li>
+      <li>Create a synthetic or anonymized version of a recent transaction document and run it through a frontier model. Compare its analysis to yours. The point isn't to use this for client work — it's to understand what the technology can actually do, so you can make informed decisions about adoption.</li>
     </ul>
 
     <p><strong style="color:var(--white);">This Month:</strong></p>
@@ -1002,8 +1023,8 @@
 
     <p><strong style="color:var(--white);">This Week:</strong></p>
     <ul style="margin:0.5rem 0 1rem 1.5rem;color:var(--light);">
-      <li>Use AI to build a financial model from scratch. Give it raw data and see what comes out. Then improve the prompt until the output matches analyst quality.</li>
-      <li>Review your deal pipeline through an AI lens: which targets are most AI-exposed? Which are AI-advantaged? This filter will determine winners and losers in every sector.</li>
+      <li>Use AI to build a financial model from scratch using public data (earnings reports, market data). Give it raw numbers and see what comes out. Then refine the prompt until the output matches analyst quality. Do this with non-proprietary data first — the goal is to calibrate your understanding of the technology's capabilities.</li>
+      <li>Review your deal pipeline through an AI lens: which targets are most AI-exposed? Which are AI-advantaged? You can do this analysis with publicly available information. This filter will determine winners and losers in every sector.</li>
     </ul>
 
     <p><strong style="color:var(--white);">This Month:</strong></p>
@@ -1028,8 +1049,8 @@
 
     <p><strong style="color:var(--white);">This Week:</strong></p>
     <ul style="margin:0.5rem 0 1rem 1.5rem;color:var(--light);">
-      <li>Audit your portfolio companies for AI readiness. How many have an AI strategy? How many have someone who actually understands what's possible? The gap between their answers and reality is your risk exposure.</li>
-      <li>Run a competitive analysis using AI tools — take a portfolio company and map its industry against AI disruption timelines.</li>
+      <li>Audit your portfolio companies for AI readiness. How many have an AI strategy? How many have someone who actually understands what's possible? The gap between their answers and reality is your risk exposure. This is a conversation, not a data upload — no confidential information required.</li>
+      <li>Run a competitive analysis using AI tools with publicly available market data — take a portfolio company's industry and map it against AI disruption timelines. Use the frontier models to understand what level of analysis AI can produce <em>before</em> making enterprise procurement decisions.</li>
     </ul>
 
     <p><strong style="color:var(--white);">This Month:</strong></p>
