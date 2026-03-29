@@ -1,0 +1,23 @@
+# Secrets & credentials
+*.env
+.env*
+*secret*
+*credential*
+*token*.json
+config.json
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Build / deploy
+node_modules/
+dist/
+.cache/
