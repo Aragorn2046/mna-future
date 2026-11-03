@@ -501,6 +501,211 @@
 
   .hl-callout h3 { color: #0096D6; }
 </style>
+<style id="dcta-style">
+/* Hover lightens the site accent; there is no softer solid accent token. */
+.dcta,
+.dcta-fab {
+  --dcta-surface: var(--bg-card, #16162a);
+  --dcta-border: var(--border, #2a2a45);
+  --dcta-text: var(--white, #FFFFFF);
+  --dcta-accent: var(--green, #95F6A2);
+  --dcta-on-accent: var(--bg-primary, #0A0A12);
+  --dcta-font-head: Inter, -apple-system, BlinkMacSystemFont, sans-serif;
+  --dcta-font-body: Inter, -apple-system, BlinkMacSystemFont, sans-serif;
+  --dcta-radius: 12px;
+  --dcta-btn-radius: 100px;
+  --dcta-max: 1100px;
+}
+.dcta {
+  background: var(--bg-primary, #0A0A12);
+  color: var(--dcta-text, #FFFFFF);
+  padding: 5rem 2rem;
+}
+.dcta-inner {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: var(--dcta-max, 1100px);
+  margin-inline: auto;
+  background: var(--dcta-surface, #16162a);
+  border: 1px solid var(--dcta-border, #2a2a45);
+  border-radius: var(--dcta-radius, 12px);
+  padding: clamp(2.75rem, 6vw, 4.75rem) clamp(1.5rem, 4vw, 3.5rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: clamp(1.25rem, 2.5vw, 2rem);
+}
+.dcta-title {
+  margin: 0;
+  font-family: var(--dcta-font-head, Inter, -apple-system, BlinkMacSystemFont, sans-serif);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 800;
+  line-height: 1.2;
+  color: var(--dcta-text, #FFFFFF);
+  overflow-wrap: anywhere;
+}
+.dcta-btn,
+.dcta-fab {
+  box-sizing: border-box;
+  font-family: var(--dcta-font-body, Inter, -apple-system, BlinkMacSystemFont, sans-serif);
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--dcta-on-accent, #0A0A12);
+  background: var(--dcta-accent, #95F6A2);
+  border: 1px solid var(--dcta-accent, #95F6A2);
+  border-radius: var(--dcta-btn-radius, 100px);
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+.dcta-btn:hover,
+.dcta-fab:hover {
+  color: var(--dcta-on-accent, #0A0A12);
+  background: #95F6A2;
+  background: #a2f7ad;
+  border-color: #a2f7ad;
+  text-decoration: none;
+}
+.dcta-btn:focus-visible,
+.dcta-fab:focus-visible {
+  outline: 2px solid var(--dcta-accent, #95F6A2);
+  outline-offset: 3px;
+}
+.dcta-nowrap {
+  white-space: nowrap;
+}
+.dcta-btn {
+  display: inline-block;
+  min-height: 48px;
+  max-width: 100%;
+  padding: 0.75rem 1.35rem;
+  white-space: normal;
+}
+.dcta-fab {
+  position: fixed;
+  z-index: 90;
+  right: max(20px, env(safe-area-inset-right, 0px));
+  bottom: max(20px, env(safe-area-inset-bottom, 0px));
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0.5rem 1.15rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  white-space: normal;
+  max-width: min(22rem, calc(100vw - 2.5rem));
+}
+@media screen and (min-width: 768px) {
+  .dcta-fab {
+    white-space: nowrap;
+    max-width: none;
+  }
+  body {
+    padding-bottom: 5.25rem;
+  }
+  html {
+    scroll-padding-bottom: 5.5rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .dcta-fab {
+    left: 0;
+    right: 0;
+    bottom: calc(0.625rem + env(safe-area-inset-bottom, 0px));
+    width: max-content;
+    max-width: calc(100vw - 1.5rem);
+    height: auto;
+    min-height: 2.75rem;
+    margin-inline: auto;
+    white-space: normal;
+    text-align: center;
+    line-height: 1.25;
+    padding: 0.5rem 1rem;
+    box-shadow: none;
+  }
+  /* Bar is positioned against the pill so it grows with the label. pointer-events: none so only the pill hits the link. */
+  .dcta-fab::before {
+    content: "";
+    position: absolute;
+    left: -100vw;
+    right: -100vw;
+    top: -0.625rem;
+    bottom: calc(-0.625rem - env(safe-area-inset-bottom, 0px));
+    z-index: -1;
+    pointer-events: none;
+    background: var(--dcta-surface, #16162a);
+    border-top: 1px solid var(--dcta-border, #2a2a45);
+    box-sizing: border-box;
+  }
+  .dcta-fab::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: -1px;
+    border-radius: inherit;
+    background: var(--dcta-accent, #95F6A2);
+    pointer-events: none;
+    transition: background-color 0.15s ease, border-color 0.15s ease;
+  }
+  .dcta-fab:hover::after {
+    background: #95F6A2;
+    background: #a2f7ad;
+  }
+  body {
+    padding-bottom: calc(6.25rem + env(safe-area-inset-bottom, 0px));
+  }
+  html {
+    scroll-padding-bottom: calc(6.75rem + env(safe-area-inset-bottom, 0px));
+  }
+}
+@media (max-width: 400px) {
+  .dcta-btn {
+    padding-left: 0.9rem;
+    padding-right: 0.9rem;
+    max-width: 100%;
+    white-space: normal;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .dcta,
+  .dcta *,
+  .dcta-fab,
+  .dcta-fab::before,
+  .dcta-fab::after {
+    transition: none;
+    animation: none;
+  }
+}
+.dcta-aside {
+  display: block;
+  height: 0;
+  margin: 0;
+  padding: 0;
+}
+@media screen and (max-width: 400px) {
+  .dcta {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .dcta-inner {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+@media print {
+  .dcta-fab {
+    display: none;
+  }
+  .dcta { background: none; color: #000; }
+  .dcta-inner { background: none; border-color: #000; }
+  .dcta-title { color: #000; }
+  .dcta-btn { background: none; color: #000; border-color: #000; }
+}
+</style>
 </head>
 <body>
 
@@ -1153,6 +1358,15 @@
 <hr class="divider">
 
 <!-- ═══════════ FOOTER ═══════════ -->
+<!-- dcta:start -->
+<section class="dcta" aria-labelledby="dcta-title" lang="en">
+  <div class="dcta-inner">
+    <h2 class="dcta-title" id="dcta-title">Want Aragorn on your stage?</h2>
+    <a class="dcta-btn" href="https://www.itsmrmetaverse.com/?utm_source=mna&amp;utm_medium=client-dashboard&amp;utm_campaign=dashboard-cta">Book Aragorn for your <span class="dcta-nowrap">event<span class="dcta-arrow" aria-hidden="true">&nbsp;→</span></span></a>
+  </div>
+</section>
+<aside class="dcta-aside" aria-label="Book Aragorn"><a class="dcta-fab" href="https://www.itsmrmetaverse.com/?utm_source=mna&amp;utm_medium=client-dashboard&amp;utm_campaign=dashboard-cta">Book Aragorn for your event</a></aside>
+<!-- dcta:end -->
 <footer class="footer">
   <img src="img/aragorn-headshot.webp" alt="Aragorn Meulendijks" width="100" height="100" style="border-radius:50%;border:2px solid var(--border);margin-bottom:1rem;" loading="lazy">
   <div class="footer-name">Aragorn Meulendijks</div>
